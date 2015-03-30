@@ -10,11 +10,13 @@
 ```go
 func Flatten(arr []interface{}) []interface{}
 ```
-Returns a new array that is one-dimensional flat. Example:
+Returns a new array that is one-dimensional flat.
 
-    		var arr1 = []interface{}{1, 2, 3, 4}       // [1, 2, 3, 4]
-    		var arr2 = []interface{}{5, 6, 7, arr1}    // [5, 6, 7, [1, 2, 3, 4]]
-        result := arrayutil.Flatten(arr2)          // [5, 6, 7, 1, 2, 3, 4]
+Example:
+
+    var arr1 = []interface{}{1, 2, 3, 4}       // [1, 2, 3, 4]
+    var arr2 = []interface{}{5, 6, 7, arr1}    // [5, 6, 7, [1, 2, 3, 4]]
+    result := arrayutil.Flatten(arr2)          // [5, 6, 7, 1, 2, 3, 4]
 
 #### func  Map
 
@@ -24,11 +26,11 @@ func Map(arr []interface{}, mapFunc MapFunc) []interface{}
 Invokes `mapFunc` for each element in the array. Creates a new array containing
 the values returned by `mapFunc` Example:
 
-    		func MyMapFunc(v interface{}) interface{} {
-    			return v.(int) * 3
-    		}
-    		var myArray = []interface{}{1, 2, 3, 4}
-        result := arrayutil.Map(myArray, MyMapFunc) // [3, 6, 9, 12]
+    func MyMapFunc(v interface{}) interface{} {
+    	return v.(int) * 3
+    }
+    var myArray = []interface{}{1, 2, 3, 4}
+    result := arrayutil.Map(myArray, MyMapFunc) // [3, 6, 9, 12]
 
 #### func  Reject
 
