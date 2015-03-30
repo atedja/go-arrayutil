@@ -9,6 +9,10 @@ func MySelectFunc(v interface{}) bool {
 	return v.(int) != 3
 }
 
+func MySelectFunc2(v interface{}) bool {
+	return v.(int)%2 == 0
+}
+
 func TestSelect(t *testing.T) {
 	var myArray = []interface{}{1, 2, 3, 3, 4}
 	result := Select(myArray, MySelectFunc)
@@ -16,4 +20,10 @@ func TestSelect(t *testing.T) {
 	assert.Equal(t, 1, result[0].(int))
 	assert.Equal(t, 2, result[1].(int))
 	assert.Equal(t, 4, result[2].(int))
+
+	myArray = []interface{}{1, 2, 3, 4}
+	result = Select(myArray, MySelectFunc2)
+	assert.Equal(t, 2, len(result))
+	assert.Equal(t, 2, result[0].(int))
+	assert.Equal(t, 4, result[1].(int))
 }
