@@ -1,8 +1,8 @@
 package arrayutil
 
 /**
- * Returns a new array with duplicates removed.
- */
+Returns a new array with duplicates removed.
+*/
 func Unique(arr []interface{}) []interface{} {
 	if arr == nil || len(arr) <= 1 {
 		return arr
