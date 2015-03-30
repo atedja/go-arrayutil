@@ -15,7 +15,11 @@ Example:
 	result := Reject(myArray, Even)  // [1, 3]
 */
 func Reject(arr []interface{}, rejectFunc RejectFunc) []interface{} {
-	result := make([]interface{}, 0)
+	if arr == nil || rejectFunc == nil {
+		return arr
+	}
+
+	result := make([]interface{}, 0, len(arr))
 	for _, v := range arr {
 		if !rejectFunc(v) {
 			result = append(result, v)

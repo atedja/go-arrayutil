@@ -10,7 +10,11 @@ Example:
 	result := arrayutil.Flatten(arr2)          // [5, 6, 7, 1, 2, 3, 4]
 */
 func Flatten(arr []interface{}) []interface{} {
-	result := make([]interface{}, 0)
+	if arr == nil {
+		return arr
+	}
+
+	result := make([]interface{}, 0, len(arr))
 	for _, v := range arr {
 		switch v.(type) {
 		case []interface{}:

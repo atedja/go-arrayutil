@@ -15,7 +15,11 @@ Example:
 	result := arrayutil.Map(myArray, MyMapFunc)  // [3, 6, 9, 12]
 */
 func Map(arr []interface{}, mapFunc MapFunc) []interface{} {
-	result := make([]interface{}, 0)
+	if arr == nil || mapFunc == nil {
+		return arr
+	}
+
+	result := make([]interface{}, 0, len(arr))
 	for _, v := range arr {
 		result = append(result, mapFunc(v))
 	}

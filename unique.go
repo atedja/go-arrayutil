@@ -13,7 +13,7 @@ func Unique(arr []interface{}) []interface{} {
 		return arr
 	}
 
-	result := make([]interface{}, 0)
+	result := make([]interface{}, 0, len(arr))
 	for _, v := range arr {
 		if len(result) == 0 {
 			result = append(result, v)

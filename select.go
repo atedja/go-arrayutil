@@ -15,6 +15,10 @@ Example:
 	result := Select(myArray, Even)  // [2, 4]
 */
 func Select(arr []interface{}, selectFunc SelectFunc) []interface{} {
+	if arr == nil || selectFunc == nil {
+		return arr
+	}
+
 	result := make([]interface{}, 0)
 	for _, v := range arr {
 		if selectFunc(v) {

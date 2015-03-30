@@ -20,6 +20,10 @@ Example:
 	result := Inject(myArray, 10, Sum)      // result is 20
 */
 func Inject(arr []interface{}, initial interface{}, injectFunc InjectFunc) interface{} {
+	if arr == nil || injectFunc == nil {
+		return arr
+	}
+
 	memo := initial
 	startIndex := 0
 	if memo == nil {
