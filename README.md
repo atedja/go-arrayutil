@@ -23,7 +23,7 @@ Example:
 ```go
 func Inject(arr []interface{}, initial interface{}, injectFunc InjectFunc) interface{}
 ```
-Combines all elements of enum by applying an operation, specified by
+Combines all elements of array by applying an operation, specified by
 `InjectFunc`. For each element, the `InjectFunc` is passed a memo value and the
 element. The result becomes the memo value for the next iteration.
 
