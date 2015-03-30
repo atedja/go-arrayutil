@@ -7,7 +7,7 @@ Combines all elements of array by applying an operation, specified by
 `InjectFunc`.  For each element, the `InjectFunc` is passed a memo value and
 the element. The result becomes the memo value for the next iteration.
 
-If `nil` is passed to the `initial` memo yvalue, it will use the first element.
+If `nil` is passed to the `initial` memo value, it will use the first element.
 
 Example:
 
