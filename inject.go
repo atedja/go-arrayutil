@@ -16,8 +16,8 @@ Example:
 	}
 
 	var myArray = []interface{}{1, 2, 3, 4}
-	result := Inject(myArray, nil, Sum)				// result is 10
-	result := Inject(myArray, 10, Sum)				// result is 20
+	result := Inject(myArray, nil, Sum)     // result is 10
+	result := Inject(myArray, 10, Sum)      // result is 20
 */
 func Inject(arr []interface{}, initial interface{}, injectFunc InjectFunc) interface{} {
 	memo := initial

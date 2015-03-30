@@ -12,7 +12,7 @@ Example:
 		return v.(int)%2 == 0
 	}
 	var myArray = []interface{}{1, 2, 3, 4}
-	result := Reject(myArray, Even) // [1, 3]
+	result := Reject(myArray, Even)  // [1, 3]
 */
 func Reject(arr []interface{}, rejectFunc RejectFunc) []interface{} {
 	result := make([]interface{}, 0)

@@ -12,7 +12,7 @@ Example:
 		return v.(int) * 3
 	}
 	var myArray = []interface{}{1, 2, 3, 4}
-	result := arrayutil.Map(myArray, MyMapFunc) // [3, 6, 9, 12]
+	result := arrayutil.Map(myArray, MyMapFunc)  // [3, 6, 9, 12]
 */
 func Map(arr []interface{}, mapFunc MapFunc) []interface{} {
 	result := make([]interface{}, 0)

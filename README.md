@@ -27,7 +27,7 @@ Combines all elements of array by applying an operation, specified by
 `InjectFunc`. For each element, the `InjectFunc` is passed a memo value and the
 element. The result becomes the memo value for the next iteration.
 
-If `nil` is passed to the `initial` memo yvalue, it will use the first element.
+If `nil` is passed to the `initial` memo value, it will use the first element.
 
 Example:
 
@@ -36,8 +36,8 @@ Example:
     }
 
     var myArray = []interface{}{1, 2, 3, 4}
-    result := Inject(myArray, nil, Sum)				// result is 10
-    result := Inject(myArray, 10, Sum)				// result is 20
+    result := Inject(myArray, nil, Sum)     // result is 10
+    result := Inject(myArray, 10, Sum)      // result is 20
 
 #### func  Map
 
@@ -53,7 +53,7 @@ Example:
     	return v.(int) * 3
     }
     var myArray = []interface{}{1, 2, 3, 4}
-    result := arrayutil.Map(myArray, MyMapFunc) // [3, 6, 9, 12]
+    result := arrayutil.Map(myArray, MyMapFunc)  // [3, 6, 9, 12]
 
 #### func  Reject
 
@@ -69,7 +69,7 @@ Example:
     	return v.(int)%2 == 0
     }
     var myArray = []interface{}{1, 2, 3, 4}
-    result := Reject(myArray, Even) // [1, 3]
+    result := Reject(myArray, Even)  // [1, 3]
 
 #### func  Select
 
@@ -85,7 +85,7 @@ Example:
     	return v.(int)%2 == 0
     }
     var myArray = []interface{}{1, 2, 3, 4}
-    result := Select(myArray, Even) // [2, 4]
+    result := Select(myArray, Even)  // [2, 4]
 
 #### func  Unique
 
@@ -97,7 +97,7 @@ func Unique(arr []interface{}) []interface{}
 Example:
 
     var myArray = []interface{}{1, 2, 3, 3, 4}
-    result := Unique(myArray) // [1, 2, 3, 4]
+    result := Unique(myArray)  // [1, 2, 3, 4]
 
 #### type InjectFunc
 

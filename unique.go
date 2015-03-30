@@ -5,8 +5,8 @@ Returns a new array with duplicates removed.
 
 Example:
 
-		var myArray = []interface{}{1, 2, 3, 3, 4}
-		result := Unique(myArray) // [1, 2, 3, 4]
+	var myArray = []interface{}{1, 2, 3, 3, 4}
+	result := Unique(myArray)  // [1, 2, 3, 4]
 */
 func Unique(arr []interface{}) []interface{} {
 	if arr == nil || len(arr) <= 1 {
