@@ -23,8 +23,10 @@ Example:
 ```go
 func Map(arr []interface{}, mapFunc MapFunc) []interface{}
 ```
-Invokes `mapFunc` for each element in the array. Creates a new array containing
-the values returned by `mapFunc` Example:
+Invokes `MapFunc` for each element in the array. Creates a new array containing
+the values returned by `MapFunc`
+
+Example:
 
     func MyMapFunc(v interface{}) interface{} {
     	return v.(int) * 3
@@ -70,6 +72,11 @@ Example:
 func Unique(arr []interface{}) []interface{}
 ```
 * Returns a new array with duplicates removed.
+
+Example:
+
+    var myArray = []interface{}{1, 2, 3, 3, 4}
+    result := Unique(myArray) // [1, 2, 3, 4]
 
 #### type MapFunc
 
