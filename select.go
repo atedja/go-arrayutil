@@ -2,7 +2,7 @@ package arrayutil
 
 type SelectFunc func(interface{}) bool
 
-/**
+/*
 Invokes `SelectFunc` for each element in the array, keeping elements for which
 the function returns true. Opposite of Reject().
 

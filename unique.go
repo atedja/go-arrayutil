@@ -1,6 +1,6 @@
 package arrayutil
 
-/**
+/*
 Returns a new array with duplicates removed.
 
 Example:

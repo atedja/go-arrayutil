@@ -2,7 +2,7 @@ package arrayutil
 
 type RejectFunc func(interface{}) bool
 
-/**
+/*
 Invokes `RejectFunc` for each element in the array, deleting elements for which
 the function returns true. Opposite of Select().
 

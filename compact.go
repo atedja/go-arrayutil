@@ -1,6 +1,6 @@
 package arrayutil
 
-/**
+/*
 Removes nil values from an array.
 
 Example:

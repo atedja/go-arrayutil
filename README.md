@@ -10,7 +10,7 @@
 ```go
 func Compact(arr []interface{}) []interface{}
 ```
-* Removes nil values from an array.
+Removes nil values from an array.
 
 Example:
 
@@ -72,8 +72,8 @@ Example:
 ```go
 func Reject(arr []interface{}, rejectFunc RejectFunc) []interface{}
 ```
-* Invokes `RejectFunc` for each element in the array, deleting elements for
-which the function returns true. Opposite of Select().
+Invokes `RejectFunc` for each element in the array, deleting elements for which
+the function returns true. Opposite of Select().
 
 Example:
 
@@ -88,7 +88,7 @@ Example:
 ```go
 func Select(arr []interface{}, selectFunc SelectFunc) []interface{}
 ```
-* Invokes `SelectFunc` for each element in the array, keeping elements for which
+Invokes `SelectFunc` for each element in the array, keeping elements for which
 the function returns true. Opposite of Reject().
 
 Example:
@@ -104,7 +104,7 @@ Example:
 ```go
 func Unique(arr []interface{}) []interface{}
 ```
-* Returns a new array with duplicates removed.
+Returns a new array with duplicates removed.
 
 Example:
 
