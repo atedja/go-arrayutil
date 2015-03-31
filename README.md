@@ -5,6 +5,18 @@
 
 ## Usage
 
+#### func  Compact
+
+```go
+func Compact(arr []interface{}) []interface{}
+```
+* Removes nil values from an array.
+
+Example:
+
+    var arr = []interface{}{1, 2, 3, 4, nil, 5}
+    result := Compact(arr)  // [1, 2, 3, 4, 5]
+
 #### func  Flatten
 
 ```go
